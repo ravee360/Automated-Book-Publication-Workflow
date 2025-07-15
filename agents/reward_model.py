@@ -28,6 +28,4 @@ def feedback_to_reward_llm(feedback_text: str) -> int:
         print(f"❌ LLM reward parsing failed: {e}")
         return 3
 
-# Fallback rule-based
-
 

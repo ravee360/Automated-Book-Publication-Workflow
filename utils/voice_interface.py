@@ -1,4 +1,3 @@
-# === voice_interface.py ===
 import speech_recognition as sr
 from gtts import gTTS
 import os
@@ -7,7 +6,6 @@ import subprocess
 import pygame
 import time
 
-# === Capture voice feedback ===
 def get_voice_input() -> str:
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
@@ -22,7 +20,6 @@ def get_voice_input() -> str:
         print("❌ STT service error.")
         return ""
 
-# === Speak text output ===
 def speak_text(text: str):
     try:
         tts = gTTS(text=text, lang='en')
@@ -36,7 +33,6 @@ def speak_text(text: str):
         pygame.mixer.music.load(temp_path)
         pygame.mixer.music.play()
 
-        # Wait for the audio to finish
         while pygame.mixer.music.get_busy():
             time.sleep(0.3)
 
@@ -46,9 +42,8 @@ def speak_text(text: str):
     except Exception as e:
         print(f"❌ Error during audio playback: {e}")
 
-# === Ask user to choose between voice or text input ===
 def choose_input_mode() -> str:
-    print("\n🧾 Select input method:")
+    print("\n🗾 Select input method:")
     print("1️⃣ Speak your input")
     print("2️⃣ Type your input")
     choice = input("Enter 1 or 2: ").strip()
@@ -61,7 +56,6 @@ def choose_input_mode() -> str:
         print("⚠️ Invalid choice. Defaulting to text.")
         return input("✍️ Enter your input: ").strip()
 
-# === Ask user how they want to receive output ===
 def choose_output_mode(context: str = "output") -> str:
     print(f"\n📤 How would you like to experience the {context}?")
     print("1️⃣ Listen to audio")

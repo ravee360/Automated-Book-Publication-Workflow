@@ -11,7 +11,6 @@ with sync_playwright() as pw:
     selector = "div.mw-parser-output.ws-page-container.dynlayout-haspagenums"
     page.wait_for_selector(selector)
 
-    # Screenshot the full element in one go
     os.makedirs("screenshots", exist_ok=True)
     output_path = "screenshots/chapter1_full_clean.png"
     page.locator(selector).screenshot(path=output_path)
