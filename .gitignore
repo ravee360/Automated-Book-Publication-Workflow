@@ -1,0 +1,45 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+*.egg-info/
+*.log
+
+# === Virtual Environment ===
+venv/
+ENV/
+env/
+.venv/
+
+# === Environment Variables ===
+.env
+
+# === VS Code Settings ===
+.vscode/
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+
+# === Audio/Media Files ===
+*.mp3
+*.wav
+tts_output.*
+
+# === Temporary Files ===
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# === Jupyter Notebook Checkpoints (if added later) ===
+.ipynb_checkpoints/
+
+# === ChromaDB Persistent Storage ===
+chroma_store/
+
+# === Scraper Output (optional, if generated dynamically) ===
+Scraper/text/chapter1_spun.txt
+Scraper/text/chapter1_ocr_extracted.txt
