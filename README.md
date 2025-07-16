@@ -3,6 +3,8 @@
 It is a voice-interactive tool that takes raw chapter text (from OCR or scraped sources), lets users refine it using voice/text prompts, and rewrites it using an LLM. It stores multiple versions, allows semantic feedback search, and supports voice interaction throughout.
 
 ---
+## Video Link:  https://youtu.be/Sz6HU21VGME
+
 
 ## 📦 Features
 
